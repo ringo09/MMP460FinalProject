@@ -1,29 +1,52 @@
 <?php get_header(); ?>
-
 <!-- Row for main content area -->
-	<div class="small-12 large-8 columns" id="content" role="main">
-	
-	<?php if ( have_posts() ) : ?>
-	
-		<?php /* Start the Loop */ ?>
-		<?php while ( have_posts() ) : the_post(); ?>
-			<?php get_template_part( 'content', get_post_format() ); ?>
-		<?php endwhile; ?>
-		
-		<?php else : ?>
-			<?php get_template_part( 'content', 'none' ); ?>
-		
-	<?php endif; // end have_posts() check ?>
-	
-	<?php /* Display navigation to next/previous pages when applicable */ ?>
-	<?php if ( function_exists('reverie_pagination') ) { reverie_pagination(); } else if ( is_paged() ) { ?>
-		<nav id="post-nav">
-			<div class="post-previous"><?php next_posts_link( __( '&larr; Older posts', 'reverie' ) ); ?></div>
-			<div class="post-next"><?php previous_posts_link( __( 'Newer posts &rarr;', 'reverie' ) ); ?></div>
-		</nav>
-	<?php } ?>
-
+<div class="row">
+	<div class="large-12 columns">
+		<ul class="example-orbit" data-orbit 
+				  data-options="animation:slide;
+								pause_on_hover:true;
+								animation_speed:500;
+								navigation_arrows:true;
+								bullets:false;">
+			<?php
+				$args = array("category_name" => "home-posts");
+				$work = new WP_Query( $args );
+			?>
+			<?php if(have_posts()) : while($work->have_posts()) : $work->the_post(); ?>
+			<li class="featured-item">
+				<a href="<?php the_permalink(); ?>">
+					<div id="featuredImage">   
+						<?php the_post_thumbnail(); ?>
+					</div>
+					<div class="orbit-caption">
+						<?php the_title(); ?>
+						<?php the_excerpt(); ?>
+					</div>
+				</a>
+			</li>
+			<?php endwhile; else: ?>  
+			<?php endif; ?> <!--End of posts -->
+		</ul><!-- ends content div -->
+	</div>
+</div>
+<div class="row">
+	<div class="large-8 columns news">
+		<h3>Programs</h3>
+		<ul class="panelFix">
+			<?php
+				$args = array("category_name" => "programs");
+				$work = new WP_Query( $args );
+			?>
+			<?php if(have_posts()) : while($work->have_posts()) : $work->the_post(); ?>
+			<li class="panel">
+			  <a href="<?php the_permalink(); ?>">
+				  <?php the_title(); ?>
+			  </a>
+			</li>
+			<?php endwhile; else: ?>  
+			<?php endif; ?> <!--End of posts -->
+		</ul>
 	</div>
 	<?php get_sidebar(); ?>
-		
+</div>
 <?php get_footer(); ?>

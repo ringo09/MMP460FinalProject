@@ -472,7 +472,7 @@ ol.commentlist li section.comment a.comment-reply-link:hover, ol.commentlist li 
 }
 
 footer.full-width {
-  background-color: #fff;
+  background-color: #2d4f59;
   border-top: 1px solid #ccc;
   padding-top: 3rem;
 }
@@ -524,4 +524,127 @@ footer.full-width .love-reverie {
     margin-top: 3rem;
     padding-top: 2rem;
   }
+}
+
+/*---css--*/
+
+@import url(http://weloveiconfonts.com/api/?family=brandico);
+
+/* brandico */
+/*--link: http://weloveiconfonts.com--*/
+[class*="brandico-"]:before {
+    font-family: 'brandico', sans-serif;
+}
+
+/*--header--*/
+header ul li,
+footer ul li {
+    display: inline;
+}
+
+ul .panel {
+    list-style-type: none;
+}
+
+.logo {
+    text-align: center;
+}
+
+header {
+    padding-top: 3%;
+}
+
+header .button {
+    background: #93a5ba;
+}
+
+
+header form {
+    margin: 0;
+}
+
+.first-nav {
+    padding-right: 0;
+}
+
+.first-nav a {
+    font-size: 1.3em;
+}
+
+.secound-nav {
+    padding-right: 0;
+}
+
+.bolgNews {
+    margin-top: 10px;
+    text-align: right;
+}
+
+.about {
+    margin-top: 18px;
+    text-align: right;
+}
+
+.about a {
+    font-size: 1.4em;
+}
+
+header nav ul li {
+    padding: 0 10px 0 10px;
+}
+
+header .button {
+    float: right;
+}
+
+/*--content--*/
+
+
+.panelFix {
+    margin: 0;
+}
+
+.buttonFix li{
+    display: inline;
+}
+
+
+h2, h3 {
+    background: #608082;
+    color: #cecfd8;
+    text-align: center;
+}
+
+/*--footer--*/
+
+footer .button, 
+footer .button.success, 
+footer .button.expand {
+    background: #93a5ba;
+}
+
+footer .button.success:hover, 
+footer .button.expand:hover {
+    background: #007095;
+}
+
+footer {
+    background: #2d4f59;
+    padding-top: 3%;
+    padding-bottom: 3%;
+}
+
+footer ul {
+    margin: 0;
+}
+
+.social-media {
+    margin-top: 5%;
+}
+.social-media span {
+    font-size: 3em;
+    margin-right: 3%;
+}
+#sidebar{
+    list-style-type: none;
 }
