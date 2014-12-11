@@ -1,23 +1,37 @@
+<?php
+/*
+Template Name: program
+*/
+?>
 <?php get_header(); ?>
-
 <!-- Row for main content area -->
 <div class="row">
 	<div class="large-12 columns">
-		<h2 class="themeH"><?php _e('Search Results for', 'reverie'); ?> "<?php echo get_search_query(); ?>"</h2>
+		<h2 class="entry-title themeH"><?php the_title(); ?></h2>
 	</div>
 </div>
 <div class="row">
-	<div class="small-12 large-8 columns" id="content" role="main">
-	
-	
+	<div class="large-12 columns">
+		<?php
+			$args = array(
+			"category_name" => "programs",
+			);
+			$work = new WP_Query( $args );
+		?>
 		<?php if ( have_posts() ) : ?>
-		<?php /* Start the Loop */ ?>
-		<?php while ( have_posts() ) : the_post(); ?>
-			<?php get_template_part( 'content', get_post_format() ); ?>
-		<?php endwhile; ?>
-		<?php else : ?>
-			<?php get_template_part( 'content', 'none' ); ?>
+				<ul class="small-block-grid-1 medium-block-grid-2 large-block-grid-3">
+				<?php /* Start the Loop */ ?>
+				<?php while($work->have_posts()) : $work->the_post(); ?>
+					<li>
+						<?php get_template_part( 'content', get_post_format() ); ?>
+					</li>
+				<?php endwhile; ?>
+				</ul>
+				<?php else : ?>
+					<?php get_template_part( 'content', 'none' ); ?>
+			
 		<?php endif; // end have_posts() check ?>
+		
 		<?php /* Display navigation to next/previous pages when applicable */ ?>
 		<?php if ( function_exists('reverie_pagination') ) { reverie_pagination(); } else if ( is_paged() ) { ?>
 			<nav id="post-nav">
@@ -26,6 +40,5 @@
 			</nav>
 		<?php } ?>
 	</div>
-	<?php get_sidebar(); ?>
 </div>
 <?php get_footer(); ?>

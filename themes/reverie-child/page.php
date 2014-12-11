@@ -9,7 +9,7 @@
 	</div>
 	<div class="row">
 		<div class="large-12 columns">
-			<h2 class="entry-title"><?php the_title(); ?></h2>
+			<h2 class="entry-title themeH"><?php the_title(); ?></h2>
 		</div>
 	</div>
 	<div class="row">

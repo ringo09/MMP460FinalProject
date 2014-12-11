@@ -609,7 +609,7 @@ header .button {
 }
 
 
-h2, h3 {
+/*h2, h3*/ .themeH {
     background: #608082;
     color: #cecfd8;
     text-align: center;

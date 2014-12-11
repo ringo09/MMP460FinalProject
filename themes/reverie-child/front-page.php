@@ -31,10 +31,15 @@
 </div>
 <div class="row">
 	<div class="large-8 columns news">
-		<h3>Programs</h3>
+		<h3 class="themeH">Programs</h3>
 		<ul class="panelFix">
 			<?php
-				$args = array("category_name" => "programs");
+				$args = array(
+
+					"category_name" => "programs",
+					'posts_per_page'   => 5
+
+					);
 				$work = new WP_Query( $args );
 			?>
 			<?php if(have_posts()) : while($work->have_posts()) : $work->the_post(); ?>

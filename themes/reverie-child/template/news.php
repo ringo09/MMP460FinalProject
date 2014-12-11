@@ -13,10 +13,13 @@ Template Name: news
 <div class="row">
 	<div class="large-8 columns">
 		<div>
-			<h3>News</h3>
+			<h3 class="themeH">News</h3>
 			<ul class="panelFix">
 				<?php
-					$args = array("category_name" => "news");
+					$args = array(
+						"category_name" => "news",
+						'posts_per_page'   => 3
+					);
 					$work = new WP_Query( $args );
 				?>
 				<?php if(have_posts()) : while($work->have_posts()) : $work->the_post(); ?>
@@ -30,10 +33,13 @@ Template Name: news
 			</ul>
 		</div>
 		<div>
-			<h3>Events</h3>
+			<h3 class="themeH">Events</h3>
 			<ul class="panelFix">
 				<?php
-					$args = array("category_name" => "event");
+					$args = array(
+						"category_name" => "event",
+						'posts_per_page'   => 3
+					);
 					$work = new WP_Query( $args );
 				?>
 				<?php if(have_posts()) : while($work->have_posts()) : $work->the_post(); ?>
