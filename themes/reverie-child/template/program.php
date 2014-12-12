@@ -7,6 +7,11 @@ Template Name: program
 <!-- Row for main content area -->
 <div class="row">
 	<div class="large-12 columns">
+		<?php the_post_thumbnail('symbol'); ?>
+	</div>
+</div>
+<div class="row">
+	<div class="large-12 columns">
 		<h2 class="entry-title themeH"><?php the_title(); ?></h2>
 	</div>
 </div>

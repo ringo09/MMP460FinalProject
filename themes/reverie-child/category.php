@@ -1,10 +1,9 @@
 <?php get_header(); ?>
+<!--category-->
 
-<!-- Row for main content area -->
-<!--archive-->
 <div class="row">
 	<div class="large-12 columns">
-		<h2 class="entry-title themeH"><?php single_cat_title(); ?></h2>
+		<h2 class="entry-title themeH category"><?php single_cat_title(); ?></h2>
 	</div>
 </div>
 <div class="row">

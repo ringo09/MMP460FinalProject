@@ -31,7 +31,7 @@
 
 <body <?php body_class('antialiased'); ?>>
 
-<header>
+<header class="top">
     <div class="row">
     <!-- header.php-->
         <div class="large-4 medium-12 columns logo">

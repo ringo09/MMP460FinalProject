@@ -48,12 +48,12 @@
 		<?php wp_list_comments('type=comment&callback=reverie_comments'); ?>
 		
 		</ol>
-		<footer>
+		<div>
 			<nav id="comments-nav">
 				<div class="comments-previous"><?php previous_comments_link( __( '&larr; Older comments', 'reverie' ) ); ?></div>
 				<div class="comments-next"><?php next_comments_link( __( 'Newer comments &rarr;', 'reverie' ) ); ?></div>
 			</nav>
-		</footer>
+		</div>
 	</section>
 <?php else : // this is displayed if there are no comments so far ?>
 	<?php if ( comments_open() ) : ?>

@@ -1,5 +1,5 @@
 </div><!-- Container End -->
-<footer>
+<footer class="bottom">
 	<div class="row">
 		<div class="large-3 columns">
 			<a href="<?php bloginfo( 'url' ); ?>">
