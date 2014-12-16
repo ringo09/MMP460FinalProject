@@ -11,9 +11,10 @@ Template Name: program
 	</div>
 </div>
 <div class="row">
-	<div class="large-12 columns">
+		<?php if( has_post_thumbnail()):  ?>
+		<?php else: ?>
 		<h2 class="entry-title themeH"><?php the_title(); ?></h2>
-	</div>
+		<?php endif; ?>
 </div>
 <div class="row">
 	<div class="large-12 columns">

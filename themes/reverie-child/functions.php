@@ -41,4 +41,9 @@
         echo '<span class="byline author">'. __('Written by ', 'reverie') . get_the_author() .', </span>';
         echo '<time class="updated" datetime="'. get_the_time('c') .'" pubdate>'. get_the_time('F jS, Y') .'</time>';
     }};
+
+    function custom_theme_setup() {
+		add_theme_support( 'post-thumbnails' );
+	}
+	add_action( 'after_setup_theme', 'custom_theme_setup' );
 ?>
