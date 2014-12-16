@@ -40,6 +40,5 @@
     function reverie_entry_meta() {
         echo '<span class="byline author">'. __('Written by ', 'reverie') . get_the_author() .', </span>';
         echo '<time class="updated" datetime="'. get_the_time('c') .'" pubdate>'. get_the_time('F jS, Y') .'</time>';
-    }
-};
+    }};
 ?>

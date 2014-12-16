@@ -647,7 +647,7 @@ footer ul {
 }
 #sidebar{
     list-style-type: none;
-    padding-left: 17px;
+    padding-left: 13px;
 }
 
 #sidebar .panel{
@@ -656,5 +656,17 @@ footer ul {
 }
 
 .entry-content{
+  width: 100%;
+}
+
+.orbit-container {
+  margin-bottom: 8px;
+}
+
+#sidebar .panel a{
+  color: #0078a0;
+}
+
+#wp-calendar {
   width: 100%;
 }
