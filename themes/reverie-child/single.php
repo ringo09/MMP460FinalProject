@@ -10,9 +10,6 @@
 				<h1 class="entry-title"><?php the_title(); ?></h1>
 				<?php reverie_entry_meta(); ?>
 			</header>
-			<div>
-				<?php the_post_thumbnail('symbol'); ?>
-			</div>
 			<div class="entry-content">
 				<?php the_content(); ?>
 			</div>

@@ -1,7 +1,8 @@
 <?php get_header(); ?>
 
 <!-- Row for main content area -->
-	<div class="small-12 large-8 columns" id="content" role="main">
+<div class="row">
+	<div class="small-12 large-8 columns">
 	
 		<article <?php post_class() ?> id="post-<?php the_ID(); ?>">
 			<header>
@@ -22,5 +23,5 @@
 
 	</div>
 	<?php get_sidebar(); ?>
-		
+</div>
 <?php get_footer(); ?>

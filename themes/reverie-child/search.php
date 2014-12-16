@@ -7,9 +7,7 @@
 	</div>
 </div>
 <div class="row">
-	<div class="small-12 large-9 columns" id="content" role="main">
-	
-	
+	<div class="large-8 columns">
 		<?php if ( have_posts() ) : ?>
 		<?php /* Start the Loop */ ?>
 		<?php while ( have_posts() ) : the_post(); ?>

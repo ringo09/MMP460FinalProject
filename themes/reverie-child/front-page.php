@@ -30,7 +30,7 @@
 	</div>
 </div>
 <div class="row">
-	<div class="large-8 columns news">
+	<div class="large-8 columns news" >
 		<h3 class="themeH">Programs</h3>
 		<ul class="panelFix">
 			<?php

@@ -1,7 +1,7 @@
 <?php get_header(); ?>
 <!-- Row for main content area -->
 <div class="row">
-	<div class="small-12 large-8 columns" id="content" role="main">
+	<div class="small-12 large-8 columns">
 		<?php if ( have_posts() ) : ?>
 			<?php /* Start the Loop */ ?>
 			<ul class="small-block-grid-1 medium-block-grid-2 large-block-grid-3">

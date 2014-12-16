@@ -542,7 +542,7 @@ footer ul li {
     display: inline;
 }
 
-ul .panel {
+ul .panel{
     list-style-type: none;
 }
 
@@ -647,4 +647,14 @@ footer ul {
 }
 #sidebar{
     list-style-type: none;
+    padding-left: 17px;
+}
+
+#sidebar .panel{
+  background-color: #f2f2f2;
+  border: solid 1px #d8d8d8;
+}
+
+.entry-content{
+  width: 100%;
 }

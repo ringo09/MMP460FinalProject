@@ -35,4 +35,11 @@
 	}
 	add_action( 'wp_enqueue_scripts', 'add_fancybox' );
 	*/
+
+	if ( ! function_exists( 'reverie_entry_meta' ) ) {
+    function reverie_entry_meta() {
+        echo '<span class="byline author">'. __('Written by ', 'reverie') . get_the_author() .', </span>';
+        echo '<time class="updated" datetime="'. get_the_time('c') .'" pubdate>'. get_the_time('F jS, Y') .'</time>';
+    }
+};
 ?>
