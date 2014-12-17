@@ -678,3 +678,26 @@ footer ul {
 #wp-calendar {
   width: 100%;
 }
+
+.widget_recent_entries ul li{
+  padding:10px 0 10px 0;
+}
+
+
+header .button, footer .button{
+  padding: 0;
+}
+
+footer .button.expand {
+  padding: 0;
+}
+
+header .button a, footer .button a{
+  padding: 17px 32px 17px 32px;
+  display: inline-block;
+}
+
+footer .button.expand a{
+  padding: 17px 85px 17px 85px;
+  display: inline-block;
+}
